@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Juego de Memorama de Profesiones - Encuentra los pares">
+  <title>Memorama de Profesiones</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="background-shapes"></div>
+  
+  <main class="game">
+    <header class="game__header">
+      <h1 class="game__title">
+        <span class="game__title-icon">🎯</span>
+        Memorama de Profesiones
+      </h1>
+      
+      <div class="stats">
+        <div class="stats__item stats__item--moves">
+          <span class="stats__icon">👆</span>
+          <div class="stats__content">
+            <span class="stats__label">Movimientos</span>
+            <span class="stats__value" id="moves">0</span>
+          </div>
+        </div>
+        <div class="stats__item stats__item--time">
+          <span class="stats__icon">⏱️</span>
+          <div class="stats__content">
+            <span class="stats__label">Tiempo</span>
+            <time class="stats__value" id="timer">00:00</time>
+          </div>
+        </div>
+        <div class="stats__item stats__item--pairs">
+          <span class="stats__icon">✨</span>
+          <div class="stats__content">
+            <span class="stats__label">Pares</span>
+            <span class="stats__value"><span id="pairs">0</span>/8</span>
+          </div>
+        </div>
+      </div>
+    </header>
+    
+    <section 
+      class="board" 
+      id="game-board" 
+      role="grid" 
+      aria-label="Tablero de memorama"
+    >
+      <!-- Cartas generadas por JavaScript -->
+    </section>
+    
+    <footer class="game__controls">
+      <button class="btn btn--primary" id="restart">
+        <span class="btn__icon">🔄</span>
+        Reiniciar
+      </button>
+      <button class="btn btn--secondary" id="difficulty">
+        <span class="btn__icon">⚡</span>
+        <span id="difficulty-text">Fácil</span>
+      </button>
+    </footer>
+  </main>
+  
+  <!-- Modal de victoria -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal" id="win-modal">
+      <div class="modal__confetti"></div>
+      <div class="modal__content">
+        <span class="modal__trophy">🏆</span>
+        <h2 class="modal__title">¡Felicidades!</h2>
+        <p class="modal__subtitle">Completaste el memorama</p>
+        
+        <div class="modal__stats">
+          <div class="modal__stat">
+            <span class="modal__stat-icon">⏱️</span>
+            <span class="modal__stat-value" id="final-time">00:00</span>
+            <span class="modal__stat-label">Tiempo</span>
+          </div>
+          <div class="modal__stat">
+            <span class="modal__stat-icon">👆</span>
+            <span class="modal__stat-value" id="final-moves">0</span>
+            <span class="modal__stat-label">Movimientos</span>
+          </div>
+          <div class="modal__stat">
+            <span class="modal__stat-icon">⭐</span>
+            <span class="modal__stat-value" id="final-stars">⭐⭐⭐</span>
+            <span class="modal__stat-label">Puntuación</span>
+          </div>
+        </div>
+        
+        <button class="btn btn--primary btn--large" id="play-again">
+          <span class="btn__icon">🎮</span>
+          Jugar de nuevo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
