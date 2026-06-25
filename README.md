@@ -2,8 +2,6 @@
 
 Un juego interactivo y educativo de Memorama (Memory Game) con temática de profesiones. Diseñado para ofrecer una experiencia visualmente atractiva, moderna, adaptada a dispositivos móviles y accesible para todos.
 
-![Preview](https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&q=80&w=600)
-
 ## ✨ Características
 
 - 🎮 **Dos Niveles de Dificultad**:
